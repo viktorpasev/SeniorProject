@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="logo.svg" class="logo">
+            <h1>Earworm</h1>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="uploads.html">Uploads</a></li>
+                <li><a href="listen.html">Listen</a></li>
+            </ul>
+            <button id="logout">Logout</button>
+        </nav>
+    </div>
+    
+    <div class="upload-box pdf-upload">
+        <h2>1) Upload the PDF file you want to convert.</h2>
+        <div class="inner" id="pdf-inner">
+            <div class="icon"><img src="upload.svg" class="upload"></div>
+            <span class="header"> Drag PDF file here </span>
+            <span class="header"> OR <span class="browse-button" id="pdf-browse-button">browse.</span></span>
+            <input type="file" id="pdf-input" accept="application/pdf" hidden>
+        </div>
+        <button id="convert-txt">Convert to txt</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+
+    <div class="upload-box txt-upload">
+        <h2>2) Upload the txt file you want to convert.</h2>
+        <div class="inner" id="txt-inner">
+            <div class="icon"><img src="upload.svg" class="upload"></div>
+            <span class="header"> Drag txt file here </span>
+            <span class="header"> OR <span class="browse-button" id="txt-browse-button">browse.</span></span>
+            <input type="file" id="txt-input" accept="text/plain" hidden>
+        </div>
+        <button id="convert-mp3">Convert to mp3</button>
+    </div>
+
+    <script type= "module" src="main.js"></script> 
+</body>
+</html>

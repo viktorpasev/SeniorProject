@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved PDF uploads page</title>
+    <link rel="stylesheet" href="listen.css">
+    <script type="module" src="listen.js"></script>
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+    <div class="container" style="margin-top: -80px;">
+        <nav>
+            <img src="logo.svg" class="logo">
+            <h1>Earworm</h1>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="uploads.html">Uploads</a></li>
+                <li><a href="listen.html">Listen</a></li>
+            </ul>
+            <button id="logout">Logout</button>
+        </nav>
+    </div>
+
+
+    <div class="audio-player">
+        <div class="file-input">
+            <input type="file" id="mp3File" accept=".mp3">
+        </div>
+        <div class="file-name" id="fileName">Choose an MP3 file to play.</div>
+
+        <audio id="audioPlayer" style="width: 100%;" preload="auto"></audio>
+
+        <div class="controls">
+            <button id="playButton" class="play-button">▶</button>
+            <div class="progress-bar" id="progressBar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+
+        <div class="timer" id="timer">00:00 / 00:00</div>
+
+        <div class="settings">
+            <div>
+                <label for="volumeSlider" class="volume-label">Volume</label><br>
+                <input type="range" id="volumeSlider" class="volume-slider" value="100" max="100">
+            </div>
+
+            <div>
+                <label for="speedSelect" class="speed-label">Speed</label><br>
+                <select id="speedSelect" class="speed-select">
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

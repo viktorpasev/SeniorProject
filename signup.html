@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="authenticate.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Create an Account</h1>
+        <form>
+            <div>
+                <input required type="text" name="username" id="username_field" placeholder="Username">
+            </div>
+            <div>
+                <input required type="email" name="email" id="email_field" placeholder="Email">
+            </div>
+            <div>
+                <input required type="password" name="password" id="password_field" placeholder="Password">
+            </div>
+            <div>
+                <input required type="password" name="confirm-password" id="confirm_password_field"
+                    placeholder="Confirm Password">
+                    <p class="password-note">*Password should be at least 6 characters long*</p>
+            </div>
+            <button type="submit" id="submit">Sign Up</button>
+        </form>
+        <p>Already have an account?</p>
+        <p><a href="login.html">Log in</a></p>
+        <button class="about">About Earworm</button>
+    </div>
+</body>
+</script>
+
+</html>
